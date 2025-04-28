@@ -22,10 +22,10 @@ namespace TodoList.Services
 
         public bool Delete(int id)
         {
-           var item=_context.Todoitems.Find(id);
-            if (item != null) return false;
+           var DelVal=_context.Todoitems.Find(id);
+            if (DelVal != null) return false;
 
-            _context.Todoitems.Remove(item);
+            _context.Todoitems.Remove(DelVal);
             _context.SaveChanges();
 
             return true;
